@@ -8,6 +8,8 @@ dotenv.config();
 
 import { connectToSocket } from "./controllers/socketManager.js";
 
+import userRoutes from "./routes/users.routes.js";
+
 const app = express();
 const port = process.env.PORT;
 
@@ -18,6 +20,8 @@ const connectionDb = process.env.MONGO_URI;
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
+
+app.use("/api/v1/users", userRoutes);
 
 main()
     .then(() => {
