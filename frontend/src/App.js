@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
-import LandingPage from './pages/landing'; // make sure this is imported
+import LandingPage from './pages/landing'; 
 
 function App() {
   return (
